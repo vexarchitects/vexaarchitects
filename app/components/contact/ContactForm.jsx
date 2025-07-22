@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function ContactForm() {
   return (
-    <section className=" flex items-center justify-center  px-4 py-12">
+    <section className=" font-dominik flex items-center justify-center  px-4 py-12">
       <div className=" mx-12 md:mx-28 w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section: Address */}
         <motion.div
@@ -18,7 +18,7 @@ export default function ContactForm() {
           <p>Kerala,India</p>
           <p className="pt-2">
             <span className="font-medium">email:</span>{' '}
-            vexaarchitect@gmail.com
+            vexaarchitects@gmail.com
           </p>
         </motion.div>
 

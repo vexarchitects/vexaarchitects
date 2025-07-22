@@ -6,18 +6,18 @@ import CircularText from './animatedcomponents/Circulartext';
 
 const projects = [
   {
-    title: 'Urban Masterplan',
+    
     image: '/images/11.png',
   },
   {
-    title: 'City Skyline',
+    
     image: '/images/T21.jpg',
   },
 ];
 
 export default function FeaturedProjects() {
   return (
-    <section className="bg-secondary text-black py-20 px-4 md:px-16">
+    <section className=" font-dominik bg-secondary text-black py-20 px-4 md:px-16">
       <div>
         {/* Section Heading */}
         <motion.h2
@@ -38,10 +38,11 @@ export default function FeaturedProjects() {
           viewport={{ once: true }}
           className="mt-8 text-gray-700 max-w-2xl text-base md:text-lg"
         >
-          Archipelago&apos;s portfolio of city making projects, from expansive urban
-          renewal to intimate residential spaces, showcases our innovative and
-          people-centric approach to city making.
+          We specialize in delivering perfect design solutions for homes. From planning and 3D visualizing to
+          construction and renovation, we <span className='text-primary font-bold'>think</span> , <span className='text-primary font-bold '>draw</span>,
+          and  <span className='text-primary font-bold'>build</span> to bring your vision to life.
         </motion.p>
+
 
         {/* Project Grid */}
         <div className="relative mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -62,23 +63,19 @@ export default function FeaturedProjects() {
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
 
-              {/* Project Title */}
-              <div className="absolute bottom-4 left-4 text-black px-3 py-1 text-sm font-medium rounded">
-                {project.title}
-              </div>
-
-               <a
-               href='/works'
+            
+              <a
+                href='/works'
                 className=' hidden md:block absolute bottom-4 right-4  px-3 py-1 text-sm font-light rounded'>
-                  {i === projects.length - 1 && (
-                    <CircularText
-                      text="*VIEW*OTHER*PROJECTS"
-                      onHover="speedUp"
-                      spinDuration={20}
-                      className="absolute bottom-0 right-0 z-10"
-                    />
-                  )}
-                </a>
+                {i === projects.length - 1 && (
+                  <CircularText
+                    text="*VIEW*OTHER*PROJECTS"
+                    onHover="speedUp"
+                    spinDuration={20}
+                    className="absolute bottom-0 right-0 z-10"
+                  />
+                )}
+              </a>
 
               {/* CircularText only on last project image */}
               {/* {i === projects.length - 1 && (
@@ -91,6 +88,24 @@ export default function FeaturedProjects() {
               )} */}
             </motion.div>
           ))}
+        </div>
+
+        {/* See More link - only visible on small screens */}
+        <div className="mt-10 md:hidden flex justify-center">
+          <Link
+            href="/works"
+            className="inline-flex items-center font-medium border-b border-gray-800 text-lg group"
+          >
+            <span className="mr-2">See More</span>
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
 
         {/* View All Button at Bottom */}

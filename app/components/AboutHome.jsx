@@ -169,14 +169,14 @@ const   AboutHome = () => {
   
   const stats = [
     {
-  number: "150",
+  number: "20",
   suffix: "+",
   title: "Clients Served",
   illustration:<DwellingsIllustration/>,
   delay:0
 },
 {
-  number: "200",
+  number: "50",
   suffix: "+",
   title: "Projects Completed",
   illustration:<MasterPlanIllustration/>,
@@ -191,7 +191,7 @@ const   AboutHome = () => {
   delay:0.4,
 },
 {
-  number: "500",
+  number: "100",
   suffix: "+",
   title: "3D Visuals Created",
   illustration:<GamesIllustration/>,
@@ -213,14 +213,15 @@ const   AboutHome = () => {
           className="text-left mb-20"
         >
           <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight">
-            We're City Making<br />
-            Design Leaders
-          </h1>
-          
-          {/* Changed: Paragraph text color to a lighter gray for better readability on dark background */}
-          <p className="text-lg md:text-xl text-[#E0E0E0] mb-12 max-w-2xl">
-            From health and knowledge precincts to club houses...
-          </p>
+  Crafting Impactful<br />
+  Spaces That Inspire
+</h1>
+
+<p className="text-lg md:text-xl text-[#E0E0E0] mb-12 max-w-2xl">
+  From immersive 3D visuals and thoughtful planning to full-scale builds,
+   our studio blends creativity and precision to deliver beautiful, functional environments for modern living.
+</p>
+
           
           <motion.a
           href='/about'
@@ -230,7 +231,7 @@ const   AboutHome = () => {
             className="group flex items-center gap-4 text-white text-lg font-medium hover:text-white transition-colors duration-300"
           >
             <span className="border-b border-white pb-1 group-hover:border-white transition-colors duration-300">
-              Discover Our Process
+              Discover More
             </span>
             <motion.div
               animate={{ x: [0, 5, 0] }}
@@ -243,7 +244,7 @@ const   AboutHome = () => {
             </motion.div>
           </motion.a>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <StatCard
               key={index}

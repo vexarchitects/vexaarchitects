@@ -8,61 +8,64 @@ const crewMembers = [
   {
     image: '/images/rahil.png',
     name: 'Rahil',
-    role: 'Creative Director',
+    role: '3D Visualizer',
     socials: {
-      instagram: 'https://instagram.com/rahil',
-      twitter: 'https://twitter.com/rahil',
-      linkedin: 'https://linkedin.com/in/rahil',
+      instagram: 'https://www.instagram.com/rahil__kp__',
+     
     },
   },
   {
     image: '/images/safwan.png',
     name: 'Safwan',
-    role: 'Lead Developer',
+    role: 'Developer',
     socials: {
-      github: 'https://github.com/safwan',
-      linkedin: 'https://linkedin.com/in/safwan',
-      website: 'https://safwan.dev',
+      
+      instagram: 'https://www.instagram.com/s_afwa__n',
+      
     },
   },
   {
     image: '/images/ajnas.png',
     name: 'Ajnas',
-    role: 'UI/UX Designer',
+    role: 'Developer',
     socials: {
-      instagram: 'https://instagram.com/ajnas',
-      twitter: 'https://twitter.com/ajnas',
-      linkedin: 'https://linkedin.com/in/ajnas',
-    },
+      instagram: 'https://www.instagram.com/_ajnasz_/',
+       },
   },
   {
     image: '/images/fayas.png',
     name: 'Fayas',
-    role: 'Backend Engineer',
+    role: '3D Visualizer',
     socials: {
-      github: 'https://github.com/fayas',
-      linkedin: 'https://linkedin.com/in/fayas',
-      twitter: 'https://twitter.com/fayas',
+      instagram: 'https://www.instagram.com/mhdfayxs',
+
     },
   },
   {
     image: '/images/sahad.png',
     name: 'Shahabas',
-    role: 'Product Manager',
+    role: '3D Visualizer',
     socials: {
-      linkedin: 'https://linkedin.com/in/sahad',
-      twitter: 'https://twitter.com/sahad',
-      instagram: 'https://instagram.com/sahad',
+      
+      instagram: 'https://www.instagram.com/ismathshahabas0253/',
     },
   },
   {
     image: '/images/arshad.png',
     name: 'Arshad',
-    role: 'Marketing Lead',
+    role: 'Graphics designer',
     socials: {
-      instagram: 'https://instagram.com/arshad',
-      linkedin: 'https://linkedin.com/in/arshad',
-      twitter: 'https://twitter.com/arshad',
+      instagram: 'https://www.instagram.com/a_r_shad',
+      
+    },
+  },
+  {
+    image: '/images/shahabas.png',
+    name: 'sabith',
+    role: '3D Visualizer',
+    socials: {
+      instagram: 'https://www.instagram.com/muhammed_sabith001/',
+      
     },
   },
 ];
@@ -142,7 +145,7 @@ export default function MeetCrew() {
                 {/* Text & Icons on Hover */}
                 <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 translate-y-4 scale-95 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out">
                   <div className="text-white text-center mb-3">
-                    <h3 className="font-bold text-lg mb-1">{member.name}</h3>
+                    {/* <h3 className="font-bold text-lg mb-1">{member.name}</h3> */}
                     {/* <p className="text-sm text-gray-300">{member.role}</p> */}
                   </div>
 

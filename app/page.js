@@ -1,23 +1,20 @@
 'use client';
 import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { Inter } from "@next/font/google";
+
 import Contact from "./components/Contact";
 import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
-import HeroSection from "./components/FeaturedProjects";
+
 import Navbar from "./components/Navbar";
-import ThreeDdesign from "./components/ThreeD";
-import WebDev from "./components/WebDev";
-import SwiperComp from "./components/swiper";
+
+
 import { Hero } from "./components/Hero";
 import Loader from "./components/Loader";
 import FeaturedProjects from "./components/FeaturedProjects";
-import Service from "./components/ServiceHome";
+
 import ServiceHome from "./components/ServiceHome";
 import AboutHome from "./components/AboutHome";
-import ScrollPara from "./components/ScrollPara";
+
 import OurStory from "./components/OurStory";
 
 
@@ -53,7 +50,7 @@ export default function Home() {
 
 
       <Hero />
-      <OurStory/>
+      <OurStory />
       {/* <ScrollPara /> */}
       <FeaturedProjects />
       <AboutHome />

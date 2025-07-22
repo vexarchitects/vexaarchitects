@@ -14,7 +14,7 @@ const services = [
   title: 'Exterior Design & Visualization',
   description:
     'We shape striking exteriors and outdoor spaces with precision. Every design is presented in detailed 3D, giving you a complete view before execution.',
-  image: '/images/n12.png',
+  image: '/images/M1.jpg',
 }
 
 
@@ -23,7 +23,7 @@ const services = [
 
 export default function ServiceHome() {
   return (
-    <section className="text-black py-20 px-4 md:px-16 space-y-24">
+    <section className=" font-dominik text-black py-20 px-4 md:px-16 space-y-24">
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
