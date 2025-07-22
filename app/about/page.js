@@ -5,6 +5,7 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import AboutSection from '../components/about/Aboutsection'
 import MeetCrew from '../components/about/MeetCrew'
+import ScrollToTopButton from '../components/ScrollToTop'
 
 
 function AboutPage() {
@@ -16,6 +17,7 @@ function AboutPage() {
         <MeetCrew/>
         <Contact/>
         <Footer/>
+        <ScrollToTopButton/>
     </div>
   )
 }

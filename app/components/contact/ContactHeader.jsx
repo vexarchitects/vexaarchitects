@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const ContactHeader = () => {
   return (
-    <section className="bg-secondary min-h-[60vh] w-full mt-36">
-      <div className="  mx-20 px-6 py-8">
+    <section className="bg-secondary  w-full mt-36">
+      <div className="  mx-4 md:px-20 px-6 py-8">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -14,7 +14,7 @@ const ContactHeader = () => {
           transition={{ duration: 0.6 }}
         >
           <Link href="/">
-           <h1 className='text-5xl text-primary'>Vexa-Architect</h1>
+           <h1 className='text-2xl md:text-5xl text-primary'>Vexa-Architect</h1>
           </Link>
         </motion.div>
 
@@ -38,7 +38,7 @@ const ContactHeader = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-[80px] md:text-[120px] leading-tight text-black font-semibold"
+          className="text-[50px] md:text-[120px] leading-tight text-black font-semibold"
         >
           Contact Us
         </motion.h1>

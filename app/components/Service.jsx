@@ -6,22 +6,22 @@ const services = [
   {
     title: 'Plan Designing',
     description: 'We offer customized architectural plans that align with your vision, space, and regulations.',
-    image: '/images/plan.jpg', // Replace with actual image
+    image: '/images/plan.png', // Replace with actual image
   },
   {
     title: '3D Visualising',
     description: 'Experience your project before it’s built with immersive 3D visualizations.',
-    image: '/images/3d.jpg', // Replace with actual image
+    image: '/images/T24.jpg', // Replace with actual image
   },
   {
     title: 'Interior & Exterior Work',
     description: 'We bring harmony to your spaces through expert interior and exterior design solutions.',
-    image: '/images/interior-exterior.jpg', // Replace with actual image
+    image: '/images/exterior.jpg', // Replace with actual image
   },
   {
     title: 'Renovation Work',
     description: 'Transform old spaces into modern marvels with our renovation expertise.',
-    image: '/images/renovation.jpg', // Replace with actual image
+    image: '/images/8.jpg', // Replace with actual image
   },
   {
     title: 'Modular Kitchen',
@@ -31,13 +31,13 @@ const services = [
   {
     title: 'Construction',
     description: 'From ground up, we deliver strong, sustainable, and aesthetic constructions.',
-    image: '/images/construction.jpg', // Replace with actual image
+    image: '/images/cunstruction.jpg', // Replace with actual image
   },
 ];
 
 export default function Service() {
   return (
-    <section className="text-black px-4 md:px-16 space-y-24">
+    <section className=" font-dominik text-black px-4 md:px-16 space-y-24">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,15 +59,16 @@ export default function Service() {
             transition={{ delay: i * 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="w-full md:w-1/2">
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={800}
-                height={500}
-                className="rounded-lg shadow-md w-full object-cover"
-              />
-            </div>
+           <div className="w-full md:w-1/2 h-64 md:h-96">
+  <Image
+    src={service.image}
+    alt={service.title}
+    width={800}
+    height={500}
+    className="rounded-lg shadow-md w-full h-full object-cover"
+  />
+</div>
+
             <div className="w-full md:w-1/2">
               <h3 className="text-3xl font-semibold mb-4">{service.title}</h3>
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">

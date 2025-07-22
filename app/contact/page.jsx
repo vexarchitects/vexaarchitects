@@ -4,8 +4,10 @@ import ContactForm from '../components/contact/ContactForm'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Contact from '../components/Contact'
+import ScrollToTopButton from '../components/ScrollToTop'
 
 function ContactPage() {
+  
   return (
     <div>
         <Navbar/>
@@ -13,6 +15,8 @@ function ContactPage() {
         <Contact/>
         <ContactForm/>
         <Footer/>
+        <ScrollToTopButton/>
+
     </div>
   )
 }
