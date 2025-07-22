@@ -103,7 +103,7 @@ export default function Footer() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/images/vexa-white.png"
+              src="/images/vaxa-main.png"
               alt="Vexa-Architect"
               width={160}
               height={60}
@@ -119,7 +119,7 @@ export default function Footer() {
             {[
               { href: "/works", label: "Works" },
               { href: "/about", label: "About Us" },
-              { href: "/service", label: "Services" },
+              { href: "/services", label: "Services" },
               { href: "/contact", label: "Contact" },
             ].map((link, index) => (
               <motion.div key={link.href} variants={linkVariants} initial="rest" whileHover="hover">
