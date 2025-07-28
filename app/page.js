@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div className={` overflow-hidden`}>
-      <Loader /> {/* ⬅️ Loading screen here */}
+      <Loader />
       <Navbar />
 
 

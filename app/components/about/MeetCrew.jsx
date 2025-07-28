@@ -6,7 +6,7 @@ import { Instagram, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 
 const crewMembers = [
   {
-    image: '/images/rahil.png',
+    image: '/images/rahil-min.png',
     name: 'Rahil',
     role: '3D Visualizer',
     socials: {
@@ -15,7 +15,7 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/safwan.png',
+    image: '/images/safwan-min.png',
     name: 'Safwan',
     role: 'Developer',
     socials: {
@@ -25,7 +25,7 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/ajnas.png',
+    image: '/images/ajnas-min.png',
     name: 'Ajnas',
     role: 'Developer',
     socials: {
@@ -33,7 +33,7 @@ const crewMembers = [
        },
   },
   {
-    image: '/images/fayas.png',
+    image: '/images/fayas-min.png',
     name: 'Fayas',
     role: '3D Visualizer',
     socials: {
@@ -42,7 +42,7 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/sahad.png',
+    image: '/images/sahad-min.png',
     name: 'Shahabas',
     role: '3D Visualizer',
     socials: {
@@ -51,7 +51,7 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/arshad.png',
+    image: '/images/arshad-min.png',
     name: 'Arshad',
     role: 'Graphics designer',
     socials: {
@@ -60,7 +60,7 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/shahabas.png',
+    image: '/images/shahabas-min.png',
     name: 'sabith',
     role: '3D Visualizer',
     socials: {

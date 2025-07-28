@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { gsap } from 'gsap'
+import { motion } from 'framer-motion';
 
 const useMeasure = () => {
   const ref = useRef(null)
@@ -22,13 +23,13 @@ const useMeasure = () => {
 
 const Masonry = () => {
   const items = [
-    { id: '1', img: '/images/6.jpg', url: '#', height: 500 },
-    { id: '2', img: '/images/7.jpg', url: '#', height: 450 },
-    { id: '4', img: '/images/11.png', url: '#', height: 500 },
-    { id: '5', img: '/images/13.png', url: '#', height: 300 },
-    { id: '6', img: '/images/R6.png', url: '#', height: 600 },
-    { id: '7', img: '/images/R7.png', url: '#', height: 400 },
-    { id: '8', img: '/images/R8.png', url: '#', height: 350 },
+    { id: '1', img: '/images/6-min.jpg', url: 'https://www.behance.net/mohdfayas', height: 500 },
+    { id: '2', img: '/images/n10-min.png', url: 'https://www.behance.net/mohdfayas', height: 450 },
+    { id: '4', img: '/images/11-min.png', url: 'https://www.behance.net/mohdfayas', height: 500 },
+    { id: '5', img: '/images/kitchen-min.jpg', url: 'https://www.behance.net/mohdfayas', height: 300 },
+    { id: '6', img: '/images/R6-min.png', url: 'https://www.behance.net/mohdfayas', height: 600 },
+    { id: '7', img: '/images/R7-min.png', url: 'https://www.behance.net/mohdfayas', height: 400 },
+    { id: '8', img: '/images/R8-min.png', url: 'https://www.behance.net/mohdfayas', height: 350 },
   ]
 
   const [containerRef, { width }] = useMeasure()
@@ -105,11 +106,12 @@ const Masonry = () => {
     })
   }, [grid, imagesReady])
 
-  return (
+return (
+  <div className="relative w-full px-4 md:px-20 pb-32">
     <div
       ref={containerRef}
-      className="relative w-full px-4 md:px-20 pb-24"
       style={{ height: containerHeight.current }}
+      className="relative w-full"
     >
       {grid.map((item) => (
         <div
@@ -126,7 +128,44 @@ const Masonry = () => {
         </div>
       ))}
     </div>
-  )
+
+    {/* See More Button */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.2 }}
+      viewport={{ once: true }}
+      className="flex justify-center mt-16"
+    >
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 500, damping: 20 }}
+      >
+        <a
+          href="https://www.behance.net/mohdfayas"
+          className="inline-flex items-center font-medium border-b border-gray-800 text-lg group"
+        >
+          <span className="mr-2">See More</span>
+          <svg
+            className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </a>
+      </motion.div>
+    </motion.div>
+  </div>
+)
+
 }
 
 export default Masonry

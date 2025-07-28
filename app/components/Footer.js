@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Facebook, Linkedin, ArrowRight, Phone, Mail } from 'lucide-react';
+import { Instagram, Facebook, Globe, ArrowRight, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   // Animation variants
@@ -56,8 +56,8 @@ export default function Footer() {
   };
 
   const socialIconVariants = {
-    rest: { 
-      scale: 1, 
+    rest: {
+      scale: 1,
       rotate: 0,
       backgroundColor: "rgba(255, 255, 255, 0.1)",
     },
@@ -103,7 +103,7 @@ export default function Footer() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/images/vaxa-main.png"
+              src="/images/vaxa-main-min.png"
               alt="Vexa-Architect"
               width={160}
               height={60}
@@ -123,7 +123,7 @@ export default function Footer() {
               { href: "/contact", label: "Contact" },
             ].map((link, index) => (
               <motion.div key={link.href} variants={linkVariants} initial="rest" whileHover="hover">
-                <Link 
+                <Link
                   href={link.href}
                   className="relative inline-block group"
                 >
@@ -140,13 +140,13 @@ export default function Footer() {
         </div>
 
         {/* Middle Row */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-3 gap-12 mb-12"
           variants={containerVariants}
         >
           {/* Office Info & Socials */}
           <motion.div variants={itemVariants}>
-            <motion.h4 
+            <motion.h4
               className="font-medium text-base mb-3"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -154,13 +154,13 @@ export default function Footer() {
             >
               Follow Us
             </motion.h4>
-            <motion.div 
+            <motion.div
               className="flex gap-4 mt-4"
               variants={containerVariants}
             >
               {/* Social Icons */}
               {[
-                { href: "https://www.behance.net/", icon: Linkedin, label: "Behance" },
+                { href: "https://www.behance.net/mohdfayas", icon: Globe, label: "Behance" },
                 { href: "https://www.instagram.com/vexa.architect/", icon: Instagram, label: "Instagram" },
                 { href: "https://www.facebook.com/share/1ErmSUZL6X/?mibextid=wwXIfr", icon: Facebook, label: "Facebook" },
               ].map((social, index) => (
@@ -194,13 +194,14 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-secondary" />
                 <h4 className="font-medium text-base">Phone</h4>
               </div>
-              <motion.p 
+              <motion.a
+                href="tel:8943025049"
                 className="text-white ml-7"
                 whileHover={{ x: 5, color: "#f2e8dd" }}
                 transition={{ duration: 0.2 }}
               >
-                +91 9876543210
-              </motion.p>
+                +91 8943025049
+              </motion.a>
             </motion.div>
 
             <motion.div
@@ -212,8 +213,8 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-secondary" />
                 <h4 className="font-medium text-base">Email</h4>
               </div>
-              <Link 
-                href="mailto:vexaarchitects@gmail.com" 
+              <Link
+                href="mailto:vexaarchitects@gmail.com"
                 className="text-secondary underline ml-7 inline-block"
               >
                 <motion.span
@@ -228,7 +229,7 @@ export default function Footer() {
 
           {/* Subscribe */}
           <motion.div variants={itemVariants}>
-            <motion.h4 
+            <motion.h4
               className="font-medium text-base mb-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -236,7 +237,7 @@ export default function Footer() {
             >
               Subscribe
             </motion.h4>
-            <motion.p 
+            <motion.p
               className="text-[#e3dfd3] mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -244,7 +245,7 @@ export default function Footer() {
             >
               Our strategy, thinking and insights. Shared with you.
             </motion.p>
-            <motion.form 
+            <motion.form
               className="relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -256,11 +257,11 @@ export default function Footer() {
                 className="w-full bg-transparent border-b border-[#bfb8aa] focus:outline-none py-2 text-[#f2e8dd] placeholder:text-[#bfb8aa] transition-colors duration-300"
                 whileFocus={{ borderColor: "#f2e8dd" }}
               />
-              <motion.button 
-                type="submit" 
+              <motion.button
+                type="submit"
                 className="absolute right-0 top-2 p-1 rounded-full"
-                whileHover={{ 
-                  scale: 1.2, 
+                whileHover={{
+                  scale: 1.2,
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   rotate: 5
                 }}
@@ -274,7 +275,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom border */}
-        <motion.div 
+        <motion.div
           className="border-t border-[#bfb8aa] pt-6 text-xs text-[#bfb8aa] text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

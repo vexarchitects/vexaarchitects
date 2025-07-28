@@ -117,10 +117,10 @@ const Navbar = () => {
           className="hidden md:block absolute bottom-8 left-8 text-sm text-secondary"
         >
           <Link
-            href="mailto:vexarchitect@gmail.com"
+            href="mailto:vexarchitects@gmail.com"
             className="ms-16 hover:underline transition-all duration-200 font-dominik"
           >
-            vexarchitect@gmail.com
+            vexarchitects@gmail.com
           </Link>
         </motion.div>
 
@@ -131,7 +131,7 @@ const Navbar = () => {
           transition={{ duration: 0.7 }}
           className="absolute bottom-8 right-8 flex space-x-6 me-8"
         >
-          <Link href="https://www.instagram.com" target="_blank">
+          <Link href="https://www.instagram.com/vexa.architect/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8 text-secondary hover:text-black transform hover:rotate-12 transition-transform duration-300"
@@ -142,7 +142,7 @@ const Navbar = () => {
             </svg>
           </Link>
 
-          <Link href="https://www.linkedin.com/in/muhammed-safwan-pm" target="_blank">
+          <Link href="https://www.behance.net/mohdfayas" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8 text-secondary hover:text-black transform hover:rotate-12 transition-transform duration-300"

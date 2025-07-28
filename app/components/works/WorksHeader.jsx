@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const WorksHeader = () => {
   return (
-    <section className="bg-secondary  w-full mt-36">
+    <section className="bg-secondary  w-full mt-6 md:mt-12">
       <div className=" mx-4 md:mx-20 px-6 py-8">
         {/* Logo */}
         <motion.div

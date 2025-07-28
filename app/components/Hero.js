@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, lazy } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -65,11 +65,12 @@ export const Hero = () => {
         transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
       >
         <Image
-          src="/images/n10.png" // ✅ Your PNG path
+          src="/images/n10-min.png" // ✅ Your PNG path
           alt="Phone Background"
           fill
           className="object-cover"
           priority
+          
         />
       </motion.div>
 

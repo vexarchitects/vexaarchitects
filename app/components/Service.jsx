@@ -6,32 +6,32 @@ const services = [
   {
     title: 'Plan Designing',
     description: 'We offer customized architectural plans that align with your vision, space, and regulations.',
-    image: '/images/plan.png', // Replace with actual image
+    image: '/images/plan-min.png', // Replace with actual image
   },
   {
     title: '3D Visualising',
     description: 'Experience your project before it’s built with immersive 3D visualizations.',
-    image: '/images/T24.jpg', // Replace with actual image
+    image: '/images/T24-min.jpg', // Replace with actual image
   },
   {
     title: 'Interior & Exterior Work',
     description: 'We bring harmony to your spaces through expert interior and exterior design solutions.',
-    image: '/images/exterior.jpg', // Replace with actual image
+    image: '/images/exterior-min.jpg', // Replace with actual image
   },
   {
     title: 'Renovation Work',
     description: 'Transform old spaces into modern marvels with our renovation expertise.',
-    image: '/images/8.jpg', // Replace with actual image
+    image: '/images/8-min.jpg', // Replace with actual image
   },
   {
     title: 'Modular Kitchen',
     description: 'Smart, stylish, and functional modular kitchens tailored to your lifestyle.',
-    image: '/images/kitchen.jpg', // Replace with actual image
+    image: '/images/kitchen-min.jpg', // Replace with actual image
   },
   {
     title: 'Construction',
     description: 'From ground up, we deliver strong, sustainable, and aesthetic constructions.',
-    image: '/images/cunstruction.jpg', // Replace with actual image
+    image: '/images/cunstruction-min.jpg', // Replace with actual image
   },
 ];
 

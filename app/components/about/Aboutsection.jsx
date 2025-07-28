@@ -77,7 +77,7 @@ const AboutSection = () => {
 
           <motion.div variants={textItemVariants} className="shadow-lg overflow-hidden rounded-xl">
             <img
-              src="/images/N11.png"
+              src="/images/N11-min.png"
               alt="3D Visualization"
               className="w-full h-auto object-cover"
               onError={(e) => {

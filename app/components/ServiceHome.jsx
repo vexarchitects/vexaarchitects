@@ -8,13 +8,13 @@ const services = [
     title: 'Interior Design & 3D Visualization',
     description:
       'From kitchens to bedrooms, we design beautiful, functional interiors tailored to your lifestyle—brought to life with immersive 3D visuals.',
-    image: '/images/A10.jpg',
+    image: '/images/A10-min.jpg',
   },
   {
     title: 'Exterior Design & Visualization',
     description:
       'We shape striking exteriors and outdoor spaces with precision. Every design is presented in detailed 3D, giving you a complete view before execution.',
-    image: '/images/M1.jpg',
+    image: '/images/M1-min.jpg',
   },
   // ...other services not shown for this preview
 ];

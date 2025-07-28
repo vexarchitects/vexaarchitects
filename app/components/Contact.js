@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Instagram, Facebook, Globe } from 'lucide-react';
 
 const Contact = () => {
   // Enhanced animation variants
@@ -198,7 +198,7 @@ const Contact = () => {
         >
           {/* Call Button */}
           <motion.a
-            href="tel:7736450868"
+            href="tel:8943025049"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -257,8 +257,8 @@ const Contact = () => {
         >
           {[
             { 
-              href: "https://www.behance.net/", 
-              icon: Linkedin, 
+              href: "https://www.behance.net/mohdfayas", 
+              icon: Globe, 
               label: "Behance",
               color: "from-blue-500 to-blue-700"
             },
