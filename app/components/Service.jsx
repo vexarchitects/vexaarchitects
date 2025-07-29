@@ -6,7 +6,7 @@ const services = [
   {
     title: 'Plan Designing',
     description: 'We offer customized architectural plans that align with your vision, space, and regulations.',
-    image: '/images/plan-min.png', // Replace with actual image
+    image: '/images/plan-min.jpg', // Replace with actual image
   },
   {
     title: '3D Visualising',
@@ -26,7 +26,7 @@ const services = [
   {
     title: 'Modular Kitchen',
     description: 'Smart, stylish, and functional modular kitchens tailored to your lifestyle.',
-    image: '/images/kitchen-min.jpg', // Replace with actual image
+    image: '/images/kitchen-min-min.png', // Replace with actual image
   },
   {
     title: 'Construction',
