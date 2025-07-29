@@ -103,7 +103,7 @@ export default function Footer() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/images/vaxa-main-min-min.png"
+              src="/images/vaxa-main-min.jpg"
               alt="Vexa-Architect"
               width={160}
               height={60}
