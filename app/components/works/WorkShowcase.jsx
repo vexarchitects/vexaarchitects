@@ -26,7 +26,7 @@ const Masonry = () => {
     { id: '1', img: '/images/6-min.jpg', url: 'https://www.behance.net/mohdfayas', height: 500 },
     { id: '2', img: '/images/n10-min.png', url: 'https://www.behance.net/mohdfayas', height: 450 },
     { id: '4', img: '/images/11-min.png', url: 'https://www.behance.net/mohdfayas', height: 500 },
-    { id: '5', img: '/images/kitchen-min.jpg', url: 'https://www.behance.net/mohdfayas', height: 300 },
+    { id: '5', img: '/images/n12-min.png', url: 'https://www.behance.net/mohdfayas', height: 300 },
     { id: '6', img: '/images/R6-min.png', url: 'https://www.behance.net/mohdfayas', height: 600 },
     { id: '7', img: '/images/R7-min.png', url: 'https://www.behance.net/mohdfayas', height: 400 },
     { id: '8', img: '/images/R8-min.png', url: 'https://www.behance.net/mohdfayas', height: 350 },
