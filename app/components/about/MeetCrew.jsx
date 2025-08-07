@@ -60,11 +60,20 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/shahabas-min.png',
+    image: '/images/shahb.png',
     name: 'sabith',
     role: '3D Visualizer',
     socials: {
       instagram: 'https://www.instagram.com/muhammed_sabith001/',
+      
+    },
+  },
+  {
+    image: '/images/sahd.png',
+    name: 'sahad',
+    role: '3D Visualizer',
+    socials: {
+      instagram: 'https://www.instagram.com/sa_haduu__?igsh=MXA5YWwxaDFrNHM1Yw==',
       
     },
   },
