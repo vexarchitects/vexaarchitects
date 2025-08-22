@@ -42,7 +42,7 @@ const crewMembers = [
     },
   },
   {
-    image: '/images/sahad-min.png',
+    image: '/images/shahbu.png',
     name: 'Shahabas',
     role: '3D Visualizer',
     socials: {
