@@ -214,14 +214,14 @@ export default function Footer() {
                 <h4 className="font-medium text-base">Email</h4>
               </div>
               <Link
-                href="mailto:vexaarchitects@gmail.com"
+                href="mailto:vexarchitects@gmail.com"
                 className="text-secondary underline ml-7 inline-block"
               >
                 <motion.span
                   whileHover={{ x: 5, scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
-                  vexaarchitects@gmail.com
+                  vexarchitects@gmail.com
                 </motion.span>
               </Link>
             </motion.div>

@@ -1,63 +1,28 @@
-'use client';
-import { useEffect } from "react";
-
-import Contact from "./components/Contact";
-import Lenis from "@studio-freight/lenis";
-import Footer from "./components/Footer";
-
-import Navbar from "./components/Navbar";
+import HomeContent from "./components/HomeContent";
 
 
-import { Hero } from "./components/Hero";
-import Loader from "./components/Loader";
-import FeaturedProjects from "./components/FeaturedProjects";
-
-import ServiceHome from "./components/ServiceHome";
-import AboutHome from "./components/AboutHome";
-
-import OurStory from "./components/OurStory";
-import ScrollToTopButton from "./components/ScrollToTop";
-
-
-export default function Home() {
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const lenis = new Lenis({
-
-        lerp: 0.05,
-        infinite: false,
-      });
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    }
-  }, []);
- 
-
-  return (
-    <div className={` overflow-hidden`}>
-      <Loader />
-      <Navbar />
+export const metadata = {
+  title: "Vexa-Architect ",
+  description: "Explore innovative architecture and design solutions with Vexa-Architect. Think | Draw | Build your dream projects.",
+  keywords: ["architecture", "design", "vexa architect", "portfolio", "construction", "interior design", "exterior design"],
+  openGraph: {
+    title: "Vexa-Architect ",
+    description: "Explore innovative architecture and design solutions with Vexa-Architect.",
+    url: "https://vexaarchitects.in",
+    siteName: "Vexa-Architect",
+    images: [
+      {
+        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Vexa-Architect Home",
+      },
+    ],
+    type: "website",
+  },
+};
 
 
-      <Hero />
-      <OurStory />
-      {/* <ScrollPara /> */}
-      <FeaturedProjects />
-      <AboutHome />
-      <ServiceHome />
-      <Contact />
-
-
-     
-      <Footer />
-      <ScrollToTopButton/>
-    </div>
-  );
+export default function Page() {
+  return <HomeContent />;
 }
-

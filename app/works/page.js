@@ -5,6 +5,26 @@ import Masonry from '../components/works/WorkShowcase';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTop';
+export const metadata = {
+  title: "Our Works | Vexa-Architect",
+  description: "Browse through Vexa-Architect’s recent works and projects showcasing our innovative architectural designs.",
+  keywords: ["architecture portfolio", "recent works", "design projects", "interior projects", "exterior projects"],
+  openGraph: {
+    title: "Vexa-Architect Works",
+    description: "Explore Vexa-Architect’s portfolio of architectural and design works.",
+    url: "https://vexaarchitect.in/works",
+    siteName: "Vexa-Architect",
+    images: [
+      {
+        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Vexa-Architect Works",
+      },
+    ],
+    type: "website",
+  },
+};
 
 function WorksPage() {
   
