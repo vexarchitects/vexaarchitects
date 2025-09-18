@@ -6,7 +6,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTop';
 export const metadata = {
-  title: "Our Works | Vexa-Architect",
+  title: "Our Works",
   description: "Browse through Vexa-Architect’s recent works and projects showcasing our innovative architectural designs.",
   keywords: ["architecture portfolio", "recent works", "design projects", "interior projects", "exterior projects"],
   openGraph: {

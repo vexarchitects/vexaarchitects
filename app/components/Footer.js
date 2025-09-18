@@ -169,6 +169,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit our ${social.label} page`}
                   className="w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20"
                   variants={socialIconVariants}
                   initial="rest"
@@ -178,6 +179,7 @@ export default function Footer() {
                 >
                   <social.icon className="w-5 h-5 text-white" />
                 </motion.a>
+
               ))}
             </motion.div>
           </motion.div>

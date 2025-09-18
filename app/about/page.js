@@ -8,7 +8,7 @@ import MeetCrew from '../components/about/MeetCrew'
 import ScrollToTopButton from '../components/ScrollToTop'
 
 export const metadata = {
-  title: "About Us | Vexa-Architect",
+  title: "About Us",
   description: "Learn about Vexa-Architect – our vision, mission, and passion for delivering innovative architectural solutions.",
   keywords: ["about vexa architect", "architecture firm", "team", "vision", "mission"],
   openGraph: {

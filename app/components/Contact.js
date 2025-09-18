@@ -199,6 +199,7 @@ const Contact = () => {
           {/* Call Button */}
           <motion.a
             href="tel:8943025049"
+            aria-label="Call Vexa Architects at 8943025049"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -278,6 +279,7 @@ const Contact = () => {
             <motion.a
               key={social.href}
               href={social.href}
+              aria-label={`Visit our ${social.label} page`}
               target="_blank"
               rel="noopener noreferrer"
               variants={socialVariants}

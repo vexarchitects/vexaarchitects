@@ -23,7 +23,7 @@ export const metadata = {
     "Vexa Architect services"
   ],
   openGraph: {
-    title: "Our Services | Vexa-Architect",
+    title: "Our Services ",
     description:
       "Explore Plan Designing, 3D Visualising, Interior & Exterior Work, Renovation, Modular Kitchens, and Construction services by Vexa-Architect.",
     url: "https://vexaarchitect.in/services",
