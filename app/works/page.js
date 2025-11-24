@@ -14,14 +14,7 @@ export const metadata = {
     description: "Explore Vexa-Architect’s portfolio of architectural and design works.",
     url: "https://vexaarchitect.in/works",
     siteName: "Vexa-Architect",
-    images: [
-      {
-        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75",
-        width: 1200,
-        height: 630,
-        alt: "Vexa-Architect Works",
-      },
-    ],
+ 
     type: "website",
   },
 };

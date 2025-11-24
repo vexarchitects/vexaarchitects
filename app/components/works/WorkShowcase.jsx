@@ -30,7 +30,7 @@ const Masonry = ({
   const items = [
     { 
       id: '1', 
-      img: '/images/6-min.jpg', 
+      img: '/images/6.webp  ', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 500,
       alt: 'Modern residential architecture project by Vexa Architect featuring contemporary design elements',
@@ -38,7 +38,7 @@ const Masonry = ({
     },
     { 
       id: '2', 
-      img: '/images/n10-min.png', 
+      img: '/images/n10.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 450,
       alt: 'Commercial building architecture showcasing innovative facade design by Vexa Architect',
@@ -46,7 +46,7 @@ const Masonry = ({
     },
     { 
       id: '4', 
-      img: '/images/11-min.png', 
+      img: '/images/11.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 500,
       alt: 'Luxury villa architecture with modern interior design by Vexa Architect',
@@ -54,7 +54,7 @@ const Masonry = ({
     },
     { 
       id: '5', 
-      img: '/images/n12-min.png', 
+      img: '/images/n12.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 300,
       alt: 'Sustainable architecture project featuring eco-friendly building design',
@@ -62,7 +62,7 @@ const Masonry = ({
     },
     { 
       id: '6', 
-      img: '/images/R6-min.png', 
+      img: '/images/R6.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 600,
       alt: 'Mixed-use development project with contemporary architectural approach',
@@ -70,7 +70,7 @@ const Masonry = ({
     },
     { 
       id: '7', 
-      img: '/images/R7-min.png', 
+      img: '/images/R7.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 400,
       alt: 'Interior design project showcasing modern space planning and furniture layout',
@@ -78,7 +78,7 @@ const Masonry = ({
     },
     { 
       id: '8', 
-      img: '/images/R8-min.png', 
+      img: '/images/R8.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 350,
       alt: 'Architectural visualization and 3D rendering of upcoming residential complex',

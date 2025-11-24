@@ -14,14 +14,7 @@ export const metadata = {
     description: "Reach out to Vexa-Architect for your architectural and design needs.",
     url: "https://vexaarchitect.in/contact",
     siteName: "Vexa-Architect",
-    images: [
-      {
-        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75",
-        width: 1200,
-        height: 630,
-        alt: "Contact Vexa-Architect",
-      },
-    ],
+    
     type: "website",
   },
 };

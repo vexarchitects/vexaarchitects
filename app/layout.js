@@ -38,14 +38,7 @@ export const metadata = {
       "Explore innovative architecture and design solutions with Vexa-Architect. Think | Draw | Build your dream projects.",
     url: "https://vexaarchitect.in", // ✅ Replace with your domain
     siteName: "Vexa-Architect",
-    images: [
-      {
-        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75", // ✅ Replace with your OG image
-        width: 1200,
-        height: 630,
-        alt: "Vexa-Architect",
-      },
-    ],
+    
     type: "website",
     seeAlso: [
       "https://www.behance.net/mohdfayas",

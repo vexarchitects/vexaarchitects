@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: url('/images/bg-1.jpg'); /* Optional: Use a different image for dark mode */
+  --background: url('/images/bg-1.webp'); /* Optional: Use a different image for dark mode */
 
  
 }
@@ -17,7 +17,7 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: url('/images/bg2.jpg'); /* Optional: Use a different image for dark mode */
+    --background: url('/images/bg-1.webp'); /* Optional: Use a different image for dark mode */
     --background: #0a0a0a;
     --foreground: #ededed;
   }

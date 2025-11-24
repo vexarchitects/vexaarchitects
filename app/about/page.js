@@ -16,14 +16,7 @@ export const metadata = {
     description: "Discover the story, vision, and mission of Vexa-Architect.",
     url: "https://www.vexaarchitect.in/about",
     siteName: "Vexa-Architect",
-    images: [
-      {
-        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75",
-        width: 1200,
-        height: 630,
-        alt: "About Vexa-Architect",
-      },
-    ],
+   
     type: "website",
   },
 };

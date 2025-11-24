@@ -28,14 +28,7 @@ export const metadata = {
       "Explore Plan Designing, 3D Visualising, Interior & Exterior Work, Renovation, Modular Kitchens, and Construction services by Vexa-Architect.",
     url: "https://vexaarchitect.in/services",
     siteName: "Vexa-Architect",
-    images: [
-      {
-        url: "https://www.vexaarchitect.in/_next/image?url=%2Fimages%2Fvexa-primary.png&w=384&q=75", // 🔄 create one collage-style OG image from your service images
-        width: 1200,
-        height: 630,
-        alt: "Vexa-Architect Services",
-      },
-    ],
+   
     type: "website",
   },
 };

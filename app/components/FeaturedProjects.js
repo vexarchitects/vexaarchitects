@@ -7,11 +7,11 @@ import CircularText from './animatedcomponents/Circulartext';
 const projects = [
   {
     
-    image: '/images/11-min.png',
+    image: '/images/11.webp',
   },
   {
     
-    image: '/images/B3.jpg',
+    image: '/images/B3.webp',
   },
 ];
 

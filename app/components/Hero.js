@@ -65,7 +65,7 @@ export const Hero = () => {
         transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
       >
         <Image
-          src="/images/n10-min.png" // ✅ Your PNG path
+          src="/images/n10.webp" // ✅ Your PNG path
           alt="Phone Background"
           fill
           className="object-cover"
