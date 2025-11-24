@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MessageCircle, Instagram, Facebook, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 const Contact = () => {
   // Enhanced animation variants
@@ -197,12 +198,10 @@ const Contact = () => {
           variants={containerVariants}
         >
           {/* Call Button */}
-          <motion.a
+          <Link
             href="tel:8943025049"
             aria-label="Call Vexa Architects at 8943025049"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
+            
             className="flex items-center gap-4 px-10 py-5 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
           >
             <motion.div
@@ -212,14 +211,12 @@ const Contact = () => {
               <Phone className="w-6 h-6 text-green-600 group-hover:text-green-700 transition-colors" />
             </motion.div>
             <span className="text-gray-800 font-semibold text-lg">Call now</span>
-          </motion.a>
+          </Link>
 
           {/* Email Button */}
-          <motion.a
+          <Link
             href="mailto:vexaarchitects@gmail.com"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
+            
             className="flex items-center gap-4 px-10 py-5 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
           >
             <motion.div
@@ -229,16 +226,12 @@ const Contact = () => {
               <Mail className="w-6 h-6 text-blue-600 group-hover:text-blue-700 transition-colors" />
             </motion.div>
             <span className="text-gray-800 font-semibold text-lg">Mail us</span>
-          </motion.a>
+          </Link>
 
           {/* WhatsApp Button */}
-          <motion.a
+          <Link
             href="https://wa.me/966542725620"
-            target="_blank"
-            rel="noopener noreferrer"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
+            
             className="flex items-center gap-4 px-10 py-5 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
           >
             <motion.div
@@ -248,7 +241,7 @@ const Contact = () => {
               <MessageCircle className="w-6 h-6 text-green-500 group-hover:text-green-600 transition-colors" />
             </motion.div>
             <span className="text-gray-800 font-semibold text-lg">WhatsApp</span>
-          </motion.a>
+          </Link>
         </motion.div>
 
         {/* Social Media Icons */}
@@ -276,16 +269,11 @@ const Contact = () => {
               color: "from-blue-600 to-blue-800"
             },
           ].map((social, index) => (
-            <motion.a
+            <Link
               key={social.href}
               href={social.href}
-              aria-label={`Visit our ${social.label} page`}
-              target="_blank"
-              rel="noopener noreferrer"
-              variants={socialVariants}
-              whileHover="hover"
-              whileTap="tap"
-              custom={index}
+              
+             
               className="relative group"
             >
               <motion.div
@@ -306,7 +294,7 @@ const Contact = () => {
                 {social.label}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-800 rotate-45" />
               </motion.div>
-            </motion.a>
+            </Link>
           ))}
         </motion.div>
       </motion.div>
