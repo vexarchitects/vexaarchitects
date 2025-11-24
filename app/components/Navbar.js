@@ -46,11 +46,9 @@ const Navbar = () => {
         className="font-dominik text-secondary fixed top-0 left-0 z-50 flex justify-between items-center py-4 md:py-8 md:px-16 w-full text-white dark:bg transition-transform duration-300"
       >
         {/* Logo */}
-        <motion.a
+        <Link
           href="/"
-          initial={{ opacity: 0, y: -80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          
           className="flex items-center"
         >
           <Image
@@ -60,7 +58,7 @@ const Navbar = () => {
             height={20}
             className="object-contain"
           />
-        </motion.a>
+        </Link>
 
         {/* Toggle Button */}
         <motion.div

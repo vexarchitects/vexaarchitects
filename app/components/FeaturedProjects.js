@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
               />
 
             
-              <a
+              <Link
                 href='/works'
                 className=' hidden md:block absolute bottom-4 right-4  px-3 py-1 text-sm font-light rounded'>
                 {i === projects.length - 1 && (
@@ -75,7 +75,7 @@ export default function FeaturedProjects() {
                     className="absolute bottom-0 right-0 z-10"
                   />
                 )}
-              </a>
+              </Link>
 
               {/* CircularText only on last project image */}
               {/* {i === projects.length - 1 && (

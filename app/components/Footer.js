@@ -131,7 +131,7 @@ export default function Footer() {
                   <motion.div
                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full"
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    whileHover={{ width: "100%" }}
+
                   />
                 </Link>
               </motion.div>
@@ -164,21 +164,14 @@ export default function Footer() {
                 { href: "https://www.instagram.com/vexa.architect/", icon: Instagram, label: "Instagram" },
                 { href: "https://www.facebook.com/share/1ErmSUZL6X/?mibextid=wwXIfr", icon: Facebook, label: "Facebook" },
               ].map((social, index) => (
-                <motion.a
+                <Link
                   key={social.href}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   aria-label={`Visit our ${social.label} page`}
-                  className="w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20"
-                  variants={socialIconVariants}
-                  initial="rest"
-                  whileHover="hover"
-                  whileTap="tap"
-                  custom={index}
+                  className="w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 hover:bg-white/10 transition"
                 >
                   <social.icon className="w-5 h-5 text-white" />
-                </motion.a>
+                </Link>
 
               ))}
             </motion.div>
