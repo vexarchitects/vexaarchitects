@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import ScrollToTopButton from "./ScrollToTop";
 import Lenis from "@studio-freight/lenis";
 import Contact from "./Contact";
+import Reels from "./Reels";
 
 export default function HomeContent() {
   useEffect(() => {
@@ -37,6 +38,7 @@ export default function HomeContent() {
       <Navbar/>
       <Hero/>
       <OurStory />
+      <Reels/>
       <FeaturedProjects />
       <AboutHome />
       <ServiceHome />
