@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Autoplay } from "swiper/modules";
@@ -17,6 +17,15 @@ const reels = [
 
 export default function Reels() {
   const [loaded, setLoaded] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size to conditionally disable autoplay
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const handleLoaded = (id) => {
     setLoaded((prev) => ({ ...prev, [id]: true }));
@@ -34,9 +43,10 @@ export default function Reels() {
           <Swiper
             slidesPerView={1.2}
             spaceBetween={16}
-            freeMode
-            loop
-            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            freeMode={true}
+            loop={true}
+            // If mobile, disable autoplay by passing false
+            autoplay={isMobile ? false : { delay: 3500, disableOnInteraction: false }}
             modules={[FreeMode, Autoplay]}
             breakpoints={{
               640: { slidesPerView: 2.2, spaceBetween: 20 },
@@ -48,7 +58,6 @@ export default function Reels() {
             {reels.map((reel) => (
               <SwiperSlide key={reel.id}>
                 <div className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-neutral-200 shadow-lg">
-                  {/* Skeleton Placeholder */}
                   {!loaded[reel.id] && (
                     <div className="absolute inset-0 animate-pulse bg-neutral-300" />
                   )}
