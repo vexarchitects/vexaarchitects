@@ -52,7 +52,7 @@ const OurStory = () => {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex items-center justify-center relative px-4 py-20"
+      className=" flex items-center justify-center relative px-4 py-8 md:py-20"
     >
       {/* Animated background */}
       <motion.div
@@ -127,20 +127,8 @@ const OurStory = () => {
           })}
         </div>
 
-        {/* Scroll progress indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          style={{ 
-            opacity: useTransform(smoothProgress, [0, 0.2, 0.8, 1], [0.5, 0.8, 0.8, 0])
-          }}
-        >
-          <motion.div
-            className="w-1 h-20 bg-gradient-to-b from-transparent via-primary/30 to-transparent rounded-full"
-            style={{
-              scaleY: smoothProgress
-            }}
-          />
-        </motion.div>
+        
+        
       </motion.div>
     </section>
   );
