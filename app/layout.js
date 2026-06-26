@@ -1,5 +1,7 @@
+
 import localFont from "next/font/local";
 import "./globals.css";
+import TawkWidget from "./components/TawkWidget";
 
 const dominik = localFont({
   src: "./fonts/Dominik.ttf",
@@ -74,7 +76,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${dominik.variable}`}
     >
-      <body>{children}</body>
+      <body>{children}
+        <TawkWidget/>
+      </body>
     </html>
   );
 }
