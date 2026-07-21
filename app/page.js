@@ -2,15 +2,17 @@ import HomeContent from "./components/HomeContent";
 
 
 export const metadata = {
-  title: "Vexa-Architect ",
-  description: "Explore innovative architecture and design solutions with Vexa-Architect. Think | Draw | Build your dream projects.",
+  title: "Architecture & Interior Design Firm in Kannur, Kerala",
+  description: "Vexa-Architect is a Kannur, Kerala design studio offering plan designing, 3D visualization, interior & exterior design, renovation and construction. Get a free consultation.",
   keywords: ["architecture", "design", "vexa architect", "portfolio", "construction", "interior design", "exterior design"],
+  alternates: {
+    canonical: "https://www.vexaarchitect.in/",
+  },
   openGraph: {
-    title: "Vexa-Architect ",
-    description: "Explore innovative architecture and design solutions with Vexa-Architect.",
-    url: "https://vexaarchitects.in",
+    title: "Architecture & Interior Design Firm in Kannur, Kerala | Vexa-Architect",
+    description: "Vexa-Architect is a Kannur, Kerala design studio offering plan designing, 3D visualization, interior & exterior design, renovation and construction. Get a free consultation.",
+    url: "https://www.vexaarchitect.in/",
     siteName: "Vexa-Architect",
- 
     type: "website",
   },
 };

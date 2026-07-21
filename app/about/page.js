@@ -8,15 +8,17 @@ import MeetCrew from '../components/about/MeetCrew'
 import ScrollToTopButton from '../components/ScrollToTop'
 
 export const metadata = {
-  title: "About Us",
-  description: "Learn about Vexa-Architect – our vision, mission, and passion for delivering innovative architectural solutions.",
+  title: "About Us | Architecture & 3D Visualization Studio, Kannur",
+  description: "Founded in 2024, Vexa-Architect blends creativity and technology to deliver plan designing and 3D visualization services for homes across Kannur, Kerala.",
   keywords: ["about vexa architect", "architecture firm", "team", "vision", "mission"],
+  alternates: {
+    canonical: "https://www.vexaarchitect.in/about",
+  },
   openGraph: {
-    title: "About Vexa-Architect",
-    description: "Discover the story, vision, and mission of Vexa-Architect.",
+    title: "About Us | Architecture & 3D Visualization Studio, Kannur | Vexa-Architect",
+    description: "Founded in 2024, Vexa-Architect blends creativity and technology to deliver plan designing and 3D visualization services for homes across Kannur, Kerala.",
     url: "https://www.vexaarchitect.in/about",
     siteName: "Vexa-Architect",
-   
     type: "website",
   },
 };

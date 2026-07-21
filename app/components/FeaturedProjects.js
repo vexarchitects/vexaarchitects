@@ -6,12 +6,14 @@ import CircularText from './animatedcomponents/Circulartext';
 
 const projects = [
   {
-    
-    image: '/images/11.webp',
+    title: "Modern Residence Exterior Design in Kannur",
+    image: '/images/modern-residence-exterior-design-kannur.webp',
+    alt: "Modern residence exterior architecture design, Kannur — Vexa-Architect"
   },
   {
-    
-    image: '/images/B3.webp',
+    title: "Luxury Living Room Interior Design in Kannur",
+    image: '/images/luxury-living-room-interior-design-kannur.webp',
+    alt: "Luxury living room interior design and visualization, Kannur — Vexa-Architect"
   },
 ];
 
@@ -57,7 +59,7 @@ export default function FeaturedProjects() {
             >
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={project.alt || project.title}
                 width={1000}
                 height={600}
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -117,10 +119,19 @@ export default function FeaturedProjects() {
           className="mt-20 flex justify-center"
         >
           <Link
-            href="/projects"
-            className="inline-flex items-center text-base font-medium group pb-1"
+            href="/works"
+            className="font-dominik inline-flex items-center text-base font-medium border-b border-gray-800 pb-1 group"
+            aria-label="View all our projects in our works portfolio"
           >
-            {/* View All Projects text or icon can go here */}
+            <span className="mr-2">View All Projects</span>
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </Link>
         </motion.div>
       </div>

@@ -122,7 +122,7 @@ export default function MeetCrew() {
           className="text-5xl sm:text-6xl font-bold text-center leading-tight mb-16"
         >
           <span className="bg-primary bg-clip-text text-transparent">
-            Meet the Crew!
+            Meet Our Team!
           </span>
         </motion.h2>
 

@@ -199,8 +199,8 @@ const Contact = () => {
         >
           {/* Call Button */}
           <Link
-            href="tel:8943025049"
-            aria-label="Call Vexa Architects at 8943025049"
+            href="tel:+918943025049"
+            aria-label="Call Vexa Architects at +91 89430 25049"
             
             className="flex items-center gap-4 px-10 py-5 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
           >
@@ -230,7 +230,7 @@ const Contact = () => {
 
           {/* WhatsApp Button */}
           <Link
-            href="https://wa.me/966542725620"
+            href="https://wa.me/918943025049"
             
             className="flex items-center gap-4 px-10 py-5 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
           >

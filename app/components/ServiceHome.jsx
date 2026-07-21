@@ -14,7 +14,7 @@ const services = [
     title: 'Exterior Design & Visualization',
     description:
       'We shape striking exteriors and outdoor spaces with precision. Every design is presented in detailed 3D, giving you a complete view before execution.',
-    image: '/images/M1.webp',
+    image: '/images/exterior-architectural-visualization-kannur.webp',
   },
   // ...other services not shown for this preview
 ];

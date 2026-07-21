@@ -7,9 +7,9 @@ import Service from "../components/Service";
 import Contact from "../components/Contact";
 import ScrollToTopButton from "../components/ScrollToTop";
 export const metadata = {
-  title: "Our Services | Vexa-Architect",
+  title: "Architecture Services in Kannur — Plan Design, 3D Visuals, Construction",
   description:
-    "Discover Vexa-Architect’s full range of services including Plan Designing, 3D Visualising, Interior & Exterior Work, Renovation, Modular Kitchens, and Construction solutions.",
+    "Plan designing, 3D visualizing, interior & exterior design, renovation, modular kitchens and construction — architecture services in Kannur, Kerala.",
   keywords: [
     "architecture services",
     "plan designing",
@@ -22,13 +22,15 @@ export const metadata = {
     "architectural consultancy",
     "Vexa Architect services"
   ],
+  alternates: {
+    canonical: "https://www.vexaarchitect.in/services",
+  },
   openGraph: {
-    title: "Our Services ",
+    title: "Architecture Services in Kannur — Plan Design, 3D Visuals, Construction | Vexa-Architect",
     description:
-      "Explore Plan Designing, 3D Visualising, Interior & Exterior Work, Renovation, Modular Kitchens, and Construction services by Vexa-Architect.",
-    url: "https://vexaarchitect.in/services",
+      "Plan designing, 3D visualizing, interior & exterior design, renovation, modular kitchens and construction — architecture services in Kannur, Kerala.",
+    url: "https://www.vexaarchitect.in/services",
     siteName: "Vexa-Architect",
-   
     type: "website",
   },
 };

@@ -15,7 +15,7 @@ export default function Crew() {
       <div className="container mx-auto text-center">
         {/* Meet the Crew Header */}
         <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-primary-gradient">
-          Meet the Team
+          Meet the team
         </h2>
         
         {/* Crew Member Grid */}

@@ -46,7 +46,7 @@ const Masonry = ({
     },
     { 
       id: '4', 
-      img: '/images/11.webp', 
+      img: '/images/modern-residence-exterior-design-kannur.webp', 
       url: 'https://www.behance.net/mohdfayas', 
       height: 500,
       alt: 'Luxury villa architecture with modern interior design by Vexa Architect',

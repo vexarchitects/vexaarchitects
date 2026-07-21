@@ -38,7 +38,7 @@ export const metadata = {
     title: "Vexa-Architect",
     description:
       "Explore innovative architecture and design solutions with Vexa-Architect. Think | Draw | Build your dream projects.",
-    url: "https://vexaarchitect.in", // ✅ Replace with your domain
+    url: "https://www.vexaarchitect.in/", // ✅ Replace with your domain
     siteName: "Vexa-Architect",
     
     type: "website",
@@ -71,11 +71,52 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vexa-Architect",
+    "url": "https://www.vexaarchitect.in",
+    "logo": "https://www.vexaarchitect.in/images/vexa-primary.png",
+    "image": "https://www.vexaarchitect.in/images/vaxa-main.webp",
+    "telephone": "+918943025049",
+    "email": "vexarchitects@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kannur",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Kerala",
+    "sameAs": [
+      "https://www.instagram.com/vexa.architect/",
+      "https://www.behance.net/mohdfayas",
+      "https://www.facebook.com/share/1ErmSUZL6X/?mibextid=wwXIfr"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plan Designing"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "3D Visualising"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior & Exterior Work"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Renovation Work"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Modular Kitchen"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Construction"}}
+      ]
+    }
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${dominik.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>{children}
         <TawkWidget/>
       </body>

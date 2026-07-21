@@ -190,7 +190,7 @@ export default function Footer() {
                 <h4 className="font-medium text-base">Phone</h4>
               </div>
               <motion.a
-                href="tel:8943025049"
+                href="tel:+918943025049"
                 className="text-white ml-7"
                 whileHover={{ x: 5, color: "#f2e8dd" }}
                 transition={{ duration: 0.2 }}

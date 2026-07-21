@@ -6,15 +6,19 @@ import Navbar from '../components/Navbar'
 import Contact from '../components/Contact'
 import ScrollToTopButton from '../components/ScrollToTop'
 export const metadata = {
-  title: "Contact Us | Vexa-Architect",
-  description: "Get in touch with Vexa-Architect for inquiries, collaborations, or project discussions.",
+  title: {
+    absolute: "Contact Vexa-Architect | Architects in Kannur, Kerala"
+  },
+  description: "Get in touch with Vexa-Architect in Kannur, Kerala for architecture, interior design and 3D visualization project inquiries — call, WhatsApp or email.",
   keywords: ["contact vexa architect", "architecture inquiries", "contact design team", "architecture firm contact"],
+  alternates: {
+    canonical: "https://www.vexaarchitect.in/contact",
+  },
   openGraph: {
-    title: "Contact",
-    description: "Reach out to Vexa-Architect for your architectural and design needs.",
-    url: "https://vexaarchitect.in/contact",
+    title: "Contact Vexa-Architect | Architects in Kannur, Kerala",
+    description: "Get in touch with Vexa-Architect in Kannur, Kerala for architecture, interior design and 3D visualization project inquiries — call, WhatsApp or email.",
+    url: "https://www.vexaarchitect.in/contact",
     siteName: "Vexa-Architect",
-    
     type: "website",
   },
 };

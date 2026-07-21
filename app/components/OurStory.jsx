@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, Fragment } from 'react';
 
 const OurStory = () => {
   const containerRef = useRef(null);
@@ -81,23 +81,25 @@ const OurStory = () => {
           {words.map((word, index) => {
             const animation = getWordAnimation(index, words.length);
             return (
-              <motion.span
-                key={index}
-                className="inline-block mr-2 transform-gpu"
-                style={{
-                  opacity: animation.opacity,
-                  y: animation.y,
-                  rotateX: animation.rotateX,
-                  transformOrigin: "bottom"
-                }}
-                whileHover={{ 
-                  scale: 1.05,
-                  color: "#3B82F6",
-                  transition: { duration: 0.2 }
-                }}
-              >
-                {word}
-              </motion.span>
+              <Fragment key={index}>
+                <motion.span
+                  className="inline-block mr-2 transform-gpu"
+                  style={{
+                    opacity: animation.opacity,
+                    y: animation.y,
+                    rotateX: animation.rotateX,
+                    transformOrigin: "bottom"
+                  }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    color: "#3B82F6",
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  {word}
+                </motion.span>
+                {' '}
+              </Fragment>
             );
           })}
         </div>
@@ -107,22 +109,24 @@ const OurStory = () => {
           {highlightWords.map((word, index) => {
             const animation = getHighlightAnimation(index, highlightWords.length);
             return (
-              <motion.span
-                key={index}
-                className="inline-block mr-2 transform-gpu"
-                style={{ 
-                  opacity: animation.opacity,
-                  y: animation.y,
-                  scale: animation.scale
-                }}
-                whileHover={{ 
-                  scale: 1.1,
-                  y: -5,
-                  transition: { duration: 0.3, type: "spring", stiffness: 400 }
-                }}
-              >
-                {word}
-              </motion.span>
+              <Fragment key={index}>
+                <motion.span
+                  className="inline-block mr-2 transform-gpu"
+                  style={{ 
+                    opacity: animation.opacity,
+                    y: animation.y,
+                    scale: animation.scale
+                  }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    y: -5,
+                    transition: { duration: 0.3, type: "spring", stiffness: 400 }
+                  }}
+                >
+                  {word}
+                </motion.span>
+                {' '}
+              </Fragment>
             );
           })}
         </div>

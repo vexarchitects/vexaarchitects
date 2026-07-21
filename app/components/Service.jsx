@@ -11,7 +11,7 @@ const services = [
   {
     title: '3D Visualising',
     description: 'Experience your project before it’s built with immersive 3D visualizations.',
-    image: '/images/T24.webp', // Replace with actual image
+    image: '/images/3d-interior-living-room-design-kannur.webp', // Replace with actual image
   },
   {
     title: 'Interior & Exterior Work',

@@ -52,7 +52,7 @@ export const Hero = () => {
       style={{ lineHeight: 1.2 }}
     >
       <div>{createMotionSpans(text, "up")}</div>
-      <div className="absolute inset-0">{createMotionSpans(text, "down")}</div>
+      <div className="absolute inset-0" aria-hidden="true">{createMotionSpans(text, "down")}</div>
     </motion.div>
   );
 
@@ -79,7 +79,9 @@ export const Hero = () => {
         style={{ filter: `blur(${blur}px)` }}
         className="text-white ms-8 md:ms-20 w-full h-full flex flex-col mt-48 justify-center items-start"
       >
-        <h1 className="font-dominik  text-left leading-tight">
+        <h1 className="sr-only">Architecture, Interior Design & 3D Visualization Studio in Kannur, Kerala</h1>
+        
+        <div aria-hidden="true" className="font-dominik text-left leading-tight">
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,13 +94,13 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="flex"
+            className="flex gap-4 md:gap-6"
           >
             <FlipText text="Think." className='shadow-2xl' />
             <FlipText text="Draw." className='shadow-2xl' />
             <FlipText text="Build." className='shadow-2xl' />
           </motion.div>
-        </h1>
+        </div>
 
         <motion.div
           whileHover={{ scale: 1.1 }}

@@ -4,12 +4,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { delay, motion, useInView } from 'framer-motion';
 
 const StatCard = ({ number, suffix, title, illustration, delay = 0 }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(null);
+  const [hasStartedAnimating, setHasStartedAnimating] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, threshold: 0.3 });
 
   useEffect(() => {
     if (inView) {
+      setHasStartedAnimating(true);
       const target = parseInt(number.replace(/,/g, ''));
       let start = 0;
       const increment = target / 60; // 60 frames for smooth animation
@@ -32,6 +34,8 @@ const StatCard = ({ number, suffix, title, illustration, delay = 0 }) => {
     return num.toLocaleString();
   };
 
+  const displayValue = hasStartedAnimating && count !== null ? formatNumber(count) : number;
+
   return (
     <motion.div
       ref={ref}
@@ -48,7 +52,7 @@ const StatCard = ({ number, suffix, title, illustration, delay = 0 }) => {
           // Changed: text color to a vibrant pink/purple to stand out
           className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#B184E5]" 
         >
-          {formatNumber(count)}{suffix}
+          {displayValue}{suffix}
         </motion.span>
       </div>
       

@@ -6,15 +6,19 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTop';
 export const metadata = {
-  title: "Our Works",
-  description: "Browse through Vexa-Architect’s recent works and projects showcasing our innovative architectural designs.",
+  title: {
+    absolute: "Our Works | Architecture & Interior Design Portfolio | Vexa-Architect, Kannur"
+  },
+  description: "Browse Vexa-Architect's portfolio of residential and commercial architecture, interior and exterior design projects completed across Kerala.",
   keywords: ["architecture portfolio", "recent works", "design projects", "interior projects", "exterior projects"],
+  alternates: {
+    canonical: "https://www.vexaarchitect.in/works",
+  },
   openGraph: {
-    title: "Vexa-Architect Works",
-    description: "Explore Vexa-Architect’s portfolio of architectural and design works.",
-    url: "https://vexaarchitect.in/works",
+    title: "Our Works | Architecture & Interior Design Portfolio | Vexa-Architect, Kannur",
+    description: "Browse Vexa-Architect's portfolio of residential and commercial architecture, interior and exterior design projects completed across Kerala.",
+    url: "https://www.vexaarchitect.in/works",
     siteName: "Vexa-Architect",
- 
     type: "website",
   },
 };
