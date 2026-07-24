@@ -152,7 +152,7 @@ export default function Footer() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Follow Us On
+              Follow Us 
             </motion.h4>
             <motion.div
               className="flex gap-4 mt-4"
