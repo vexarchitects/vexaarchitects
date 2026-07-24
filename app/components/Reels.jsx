@@ -44,8 +44,8 @@ const FALLBACK_REELS = [
 const ReelItem = ({ reel, isPlaying, onPlay }) => {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [videoSrc, setVideoSrc] = useState("");
   const [hasError, setHasError] = useState(false);
+  const hasErrorRef = useRef(false);
 
   // Determine if it is a Meta CDN link that requires proxying
   const isMetaCDN =
@@ -54,54 +54,78 @@ const ReelItem = ({ reel, isPlaying, onPlay }) => {
       reel.media_url.includes("instagram.com") ||
       reel.media_url.includes("cdninstagram.com"));
 
-  useEffect(() => {
-    const initialSrc = isMetaCDN
-      ? `/api/proxy?url=${encodeURIComponent(reel.media_url)}`
-      : reel.media_url;
-    setVideoSrc(initialSrc);
-    setHasError(false);
-  }, [reel.media_url, isMetaCDN]);
+  // Compute src synchronously — avoids async state update breaking iOS gesture chain
+  const videoSrc = isMetaCDN
+    ? `/api/proxy?url=${encodeURIComponent(reel.media_url)}`
+    : reel.media_url || "";
 
-  useEffect(() => {
-    if (videoRef.current && videoSrc) {
-      if (isPlaying) {
-        // Use promise to handle mobile autoplay policy gracefully
-        const playPromise = videoRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise.catch((err) => {
-            console.warn("Autoplay was blocked or failed:", err);
-          });
-        }
-      } else {
-        videoRef.current.pause();
-      }
-    }
-  }, [isPlaying, videoSrc]);
-
-  const handleVideoError = () => {
-    if (hasError) return;
-    console.warn(`Video failed to load: ${videoSrc}. Falling back to premium stock video.`);
-
+  // Build fallback src from reel id deterministically
+  const getFallbackSrc = () => {
     const fallbackUrls = [
       "https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-interior-design-41793-large.mp4",
       "https://assets.mixkit.co/videos/preview/mixkit-bright-modern-kitchen-interior-41797-large.mp4",
       "https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-cozy-lighting-41804-large.mp4",
       "https://assets.mixkit.co/videos/preview/mixkit-spacious-modern-bathroom-interior-41808-large.mp4"
     ];
-
     const stringId = String(reel.id || "");
     const charCodeSum = stringId.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const index = Math.abs(charCodeSum) % fallbackUrls.length;
-    const fallback = fallbackUrls[index];
+    return fallbackUrls[Math.abs(charCodeSum) % fallbackUrls.length];
+  };
 
-    setVideoSrc(fallback);
+  // iOS fix: call play() synchronously inside the click handler (user gesture).
+  // This parent component's onPlay toggles playingId, but we also need
+  // the video element to receive the play command in the same gesture tick.
+  // We expose a helper that the parent wrapper calls via the onClick.
+  const handleClick = () => {
+    const video = videoRef.current;
+    if (!video) { onPlay(); return; }
+
+    if (isPlaying) {
+      video.pause();
+      onPlay();
+    } else {
+      // Load the video if not already loaded (needed for iOS which ignores preload)
+      if (video.readyState === 0) {
+        video.load();
+      }
+      // Call play() synchronously within the gesture handler for iOS compliance
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.warn("Video play failed:", err);
+        });
+      }
+      onPlay();
+    }
+  };
+
+  // Keep video in sync if isPlaying changes from outside (e.g. another reel tapped)
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (!isPlaying && !video.paused) {
+      video.pause();
+    }
+    // We do NOT auto-play here — iOS requires a gesture. The handleClick above handles it.
+  }, [isPlaying]);
+
+  const handleVideoError = () => {
+    if (hasErrorRef.current) return;
+    hasErrorRef.current = true;
     setHasError(true);
+    const video = videoRef.current;
+    if (video) {
+      const fallback = getFallbackSrc();
+      console.warn(`Video failed: ${video.src}. Falling back to: ${fallback}`);
+      video.src = fallback;
+      video.load();
+    }
   };
 
   return (
     <div
       className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-lg cursor-pointer group bg-neutral-950 border border-white/5 transition-all duration-500 hover:shadow-primary/20 hover:shadow-2xl hover:scale-[1.02]"
-      onClick={onPlay}
+      onClick={handleClick}
     >
       <video
         ref={videoRef}
@@ -111,8 +135,12 @@ const ReelItem = ({ reel, isPlaying, onPlay }) => {
         muted
         loop
         playsInline
-        preload="metadata"
+        // webkit-playsinline for older iOS Safari
+        {...{ "webkit-playsinline": "" }}
+        // "none" so iOS doesn't block: iOS ignores "metadata" and only loads on gesture
+        preload="none"
         onLoadedData={() => setIsLoaded(true)}
+        onCanPlay={() => setIsLoaded(true)}
         onError={handleVideoError}
       />
 
